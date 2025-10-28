@@ -1,0 +1,114 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+  .container-skill {
+    max-width: 900px;
+    margin: 60px auto;
+  }
+
+  .skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 15px;
+  }
+
+  .skill-name {
+    width: 120px;
+    font-weight: 600;
+  }
+
+  .progress {
+    flex: 1;
+    height: 30px;
+  }
+
+  .progress-bar {
+    font-size: 12px;
+    font-weight: 500;
+  }
+</style>
+
+<div class="container-skill">
+  <div class="row">
+    <!-- Kolom kiri -->
+    <div class="col-12 col-md-6">
+      <div class="skill-item">
+        <span class="skill-name"><img src="{% static 'bg/bostrep.png' %}" alt="Bootstrap" width="60" height="60"></span>
+        <div class="progress">
+          <div class="progress-bar text-bg-success" style="width: 25%">25%</div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-name"><img src="{% static 'icon/html.png' %}" alt="" width="90" height="90"></span>
+        <div class="progress">
+          <div class="progress-bar text-bg-danger" style="width: 50%">50%</div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-name"><img src="{% static 'icon/css.png' %}" alt="" width="50" height="50"></span>
+        <div class="progress">
+          <div class="progress-bar text-bg-info" style="width: 10%">10%</div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-name"><img src="{% static 'icon/js.webp' %}" alt="Bootstrap" width="50" height="50"></span>
+        <div class="progress">
+          <div class="progress-bar text-bg-warning" style="width: 10%">10%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kolom kanan -->
+    <div class="col-12 col-md-6">
+      <div class="skill-item">
+        <span class="skill-name"><img src="{% static 'icon/py.png' %}" alt="python" width="40" height="40"></span>
+        <div class="progress">
+          <div class="progress-bar text-bg-warning" style="width: 10%">10%</div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-name"><img src="{% static 'icon/dj.png' %}" alt="django" width="90" ></span>
+        <div class="progress">
+          <div class="progress-bar text-bg-success" style="width: 10%">10%</div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-name"><img src="{% static 'icon/phs.png' %}" alt="photoshop" width="90" ></span>
+        <div class="progress">
+          <div class="progress-bar text-bg-info" style="width: 20%">20%</div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-name"><img src="{% static 'icon/sql.png' %}" alt="MySQL" width="50" ></span>
+        <div class="progress">
+          <div class="progress-bar text-bg-secondary" style="width: 3%">0%</div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-name"><img src="{% static 'icon/laravel.png' %}" alt="Laravel" width="50"></span>
+        <div class="progress">
+          <div class="progress-bar text-bg-danger" style="width: 3%">0%</div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <span class="skill-name"><img src="{% static 'icon/php.png' %}" alt="PHP" width="50"></span>
+        <div class="progress">
+          <div class="progress-bar text-bg-primary" style="width: 3%">0%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

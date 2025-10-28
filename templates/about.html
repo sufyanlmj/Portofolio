@@ -1,0 +1,24 @@
+{% extends 'home.html' %}
+{% block content %}
+  <div class="container">
+    <div class="row">
+      {% for a in about %}
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body" style="background-color: rgba(126, 125, 125, 0.158);">
+              <h5 class="card-title">{{ a.judul }}</h5>
+              
+              <p class="card-text text-justify" style="white-space: pre-line;">
+                {{ a.deskripsi|linebreaksbr }}
+              </p>
+
+              <p class="card-text">
+                <small class="text-muted">Last updated {{ a.tanggal }}</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock content %}

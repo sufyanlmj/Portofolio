@@ -1,0 +1,32 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block content %}
+  
+        
+<div class="container">
+    <div class="row">
+              {% if project %}
+          {% for d in project %}
+            <div class="col-sm-6 col-md-3 mb-4">
+
+                <div class="card h-100 border-5 ">
+                  <div class="image-box">
+                    <img src="{{ d.foto.url }}" class="card-img-top" alt="{{ d.judul }}">
+                  </div>
+
+                  <div class="card-body text-center" >
+                    <h5 class="card-title">{{ d.judul }}</h5>
+                    <p class="card-text text-muted justify-clamp text-justify">{{ d.deskripsi|linebreaksbr }}</p>
+                    <p class="card-text text-danger mb-auto">{{ d.tanggal }}</p>
+                  </div>
+                </div>
+            </div>
+          {% endfor %}
+          {% else %}
+            <div class="text-center">
+              <h4 class="text-muted">project tidak ditemukan.</h4>
+            </div>
+        {% endif %}
+</div>
+{% endblock content %}

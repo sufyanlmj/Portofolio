@@ -1,0 +1,33 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block content %}
+  
+        
+<div class="container">
+    <div class="row">
+              {% if sertifikat %}
+          {% for s in sertifikat %}
+            <div class="col-sm-6 col-md-3 mb-4">
+
+                <div class="card h-100 border-5 ">
+                  <div class="image-box">
+                    <img src="{{ s.foto.url }}" class="card-img-top" alt="{{ s.judul_sertifikat }}">
+                  </div>
+
+                  <div class="card-body text-center" >
+                    <h5 class="card-title">{{ s.judul_sertifikat }}</h5>
+                    <p class="card-text text-muted justify-clamp text-justify">{{ s.deskripsi|linebreaksbr }}</p>
+                    <p class="card-text text-danger mb-auto">{{ s.tanggal }}</p>
+                  </div>
+                </div>
+            </div>
+          {% endfor %}
+          {% else %}
+            <div class="text-center">
+              <h4 class="text-muted">sertifikat tidak ditemukan.</h4>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}
